@@ -41,10 +41,11 @@
 	<body>
 
 		<div class="reveal">
-			<div class="slides">
+			<table class="slides">
 				<section>
-          <h2>Progressive web apps:<br/> a love story</h2>
-            <h4>@nolanlawson</h4>
+          <h2>Progressive web apps</h2>
+          <h3>A love story</h3>
+          <div class="footer text-muted">@nolanlawson</div>
           <aside class="notes">
             Hi everybody.
           </aside>
@@ -73,7 +74,7 @@
         </section>
 
         <section>
-          <h3>2010: Android was young</h3>
+          <h3>Flashback to 2010</h3>
         </section>
 
         <section>
@@ -148,10 +149,11 @@
           </div>
         </section>
 
+        <!--
         <section>
           <video src="vid/pokedroid_real.webm" controls height="600"/>
         </section>
-
+-->
         <section>
           <h3>Why was Pokédroid so popular?</h3>
         </section>
@@ -253,7 +255,7 @@
 
 -->
         <section>
-          <h3>2011: Pokédroid DMCA'd <script>document.write('\uD83D\uDE22')</script></h3>
+          <h3>2011: Pokédroid DMCA'd</h3>
           <img class="no-border" src="img/pokedroid_pulled.png" width="1083"/>
         </section>
 
@@ -271,11 +273,11 @@
         </section>
 
         <section>
-          <h2>RIP Pokédroid 😢</h2>
+          <h2>RIP Pokédroid &#x1F622;</h2>
         </section>
 
 				<section>
-					<h2>The web! ❤️</h2>
+					<h2>The web! &#x1F60D;</h2>
 				</section>
 
 				<section>
@@ -283,6 +285,7 @@
         </section>
 
 				<section>
+          <h4>Bruce Lawson – Progressive webapps <br/> and the future of the web</h4>
 					<img class="no-border" src="img/bruce_lawson.png" width="650"/>
 					<div class="footer text-muted">
 						Source: https://www.youtube.com/watch?v=YxQUxCsNomM
@@ -301,6 +304,7 @@
 				</section>
 
 				<section>
+          <h4>Alex Russell – Progressive webapps</h4>
 					<img class="no-border" src="img/alex_russell_future.png" width="650"/>
 					<div class="footer text-muted">
 					  Source: https://www.youtube.com/watch?v=x7cfLDFVyHo
@@ -322,7 +326,7 @@
 				</section>
 
         <section>
-          <h4>Coined by Alex Russell of Google</h4>
+          <h4>Coined by Alex Russell</h4>
           <img src="img/tabs_soul.png"/>
           <div style="margin-top:20px;">
             <small class="text-muted">
@@ -346,16 +350,19 @@
             <li class="fragment">Background sync (optional)</li>
           </ul>
         </section>
-
+<!--
 				<section>
 					<h3>What changed?</h3>
-					<ul>
-						<li class="fragment">AppCache → ServiceWorker</li>
-						<li class="fragment">LocalStorage/WebSQL → IndexedDB</li>
-						<li class="fragment">Touch icons → Web App Manifest</li>
-						<li class="fragment">Save to homescreen → installable webapp</li>
-					</ul>
+					<table>
+            <tbody>
+              <tr><td>AppCache</td><td>→</td><td>ServiceWorker</td></tr>
+              <tr><td>LocalStorage/WebSQL</td><td>→</td><td>IndexedDB</td></tr>
+              <tr><td>Touch icons</td><td>→</td><td>Web App Manifest</td></tr>
+              <tr><td>Save to homescreen</td><td>→</td><td>installable webapp</td></tr>
+            </tbody>
+					</table>
 				</section>
+        -->
 
 <!--
         <section>
@@ -395,13 +402,26 @@
         </section>
 
         <section>
-          <h4>Galaxy Nexus (2011), Android 4.3</h4>
-          <video src="vid/pokedex-galaxy-nexus.webm" height="600"/>
+          <h3>Tips from a native mobile developer</h3>
+          <ol>
+            <li class="fragment">Prefer offline</li>
+            <li class="fragment">Use background threads</li>
+          </ol>
+        </section>
+
+        <section>
+          <h4>Pokédex.org IDB: 4M Chrome, 5.6M FF</h4>
+          <img class="no-border" style="transform:translateY(-50px);" src="img/pokedex-idb.png"/>
         </section>
 
         <section>
 					<img src="img/pokedex_architecture.png"/>
 				</section>
+
+        <section>
+          <h4>Galaxy Nexus (2011), Android 4.3</h4>
+          <video src="vid/pokedex-galaxy-nexus.webm" height="600"/>
+        </section>
 
         <section>
           <h3>In 2011, you couldn't build a high-performance, immersive
@@ -465,15 +485,19 @@
           if (vid.controls) {
             return;
           }
-          vid.loop = true;
-          vid.currentTime = 0;
-          vid.play();
+          if (vid.paused) {
+            vid.loop = true;
+            vid.currentTime = 0;
+            vid.play();
+          }
         });
 
         var otherVideos = Array.from(document.querySelectorAll('section.past video')).concat(
           Array.from(document.querySelectorAll('section.future video')));
         otherVideos.forEach(function (vid) {
-          vid.pause();
+          if (!vid.paused) {
+            vid.pause();
+          }
         });
       }
 
@@ -484,7 +508,7 @@
           console.info(notes.innerHTML.replace(/\n\s+/g,'\n'));
         }
 
-        playVideo();
+        requestAnimationFrame(playVideo);
       } );
 
       Reveal.addEventListener('fragmentshown', function (e) {
@@ -507,7 +531,7 @@
         console.info(notes.innerHTML.replace(/\n\s+/g, '\n'));
       }
 
-      playVideo();
+      requestAnimationFrame(playVideo);
 
       if (!UA.isChrome() && !UA.isFirefox() && !UA.isAndroid() && !UA.isOpera()) {
         window.alert(
