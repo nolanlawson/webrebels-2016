@@ -178,3 +178,35 @@ pre.overlay-inner {
   justify-content: center;
   align-items: flex-end;
 }
+
+.reveal blockquote.bubble {
+  position: relative;
+  width: 600px;
+  text-align: center;
+  padding: 20px;
+  margin: 60px auto;
+  border: 8px solid #666;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px #888;
+}
+
+.reveal blockquote.speech::before {
+  left: 30px;
+  top: 100%;
+  border: 25px solid;
+  border-color: #666 transparent transparent #666;
+}
+
+.reveal blockquote.bubble::before, .reveal blockquote.bubble::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.reveal blockquote.speech::after {
+  left: 38px;
+  top: 100%;
+  border: 15px solid;
+  border-color: #fff transparent transparent #fff;
+}

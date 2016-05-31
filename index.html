@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>PWAs: a love story</title>
+		<title>Progressive web apps: a love story</title>
 
 		<meta name="description" content="PWAs: a love story">
 		<meta name="author" content="Nolan Lawson">
@@ -63,15 +63,14 @@
         <section>
 
           <img class="no-border" style="display:inline-block" height="150" src="img/pouchdb.png" alt="pouchdb"/><br/>
-          <img class="no-border" style="display:inline-block" height="100" src="img/local-npm.png" alt="local-npm"/><br/>
           <aside class="notes">
             I work at Squarespace, and I help maintain PouchDB.
           </aside>
         </section>
 
-        <!--<section>
-          <h3>A story about offline</h3>
-        </section>-->
+        <section>
+          <h3>A story about mobile</h3>
+        </section>
 
         <section>
           <h3>2010: Android was young</h3>
@@ -83,9 +82,7 @@
               <div>
                 <img class="no-border" src="img/htcdream.jpg" style="max-height:300px"/>
               </div>
-              <div>
-                <img class="no-border" src="img/nexus1.jpg" style="max-height:300px"/>
-              </div>
+                <img class="no-border" src="img/nexus_one.jpg" style="max-height:300px"/>
             </div>
             <div class="quad-inner">
               <div>
@@ -99,7 +96,15 @@
         </section>
 
         <section>
-          <img class="no-border" src="img/pokedroid-store.png" height="650"/>
+          <img class="no-border" src="img/nexus_one_detail.jpg" style="max-height:600px"/>
+        </section>
+
+        <section>
+          <img class="no-border" src="img/pokedroid_icon.png"/>
+        </section>
+
+        <section>
+          <img class="no-border" src="img/android_market_pokedroid.png" height="650"/>
         </section>
 
         <section>
@@ -109,15 +114,15 @@
         <section>
           <h2>Pokédroid</h2>
           <ul>
-            <li>440k+ downloads</li>
-            <li>9,700+ reviews</li>
+            <li>&ge; 440,000 downloads</li>
+            <li>&ge; 9,700 reviews</li>
             <li>4.8 stars</li>
-            <li>Top 10 in category "Entertainment"</li>
+            <li>Top 50 in category "Entertainment"</li>
           </ul>
         </section>
 
         <section>
-          <div class="quad-outer" style="transform:translateY(-70px);">
+          <div class="quad-outer" style="transform:translateY(-50px);">
             <div class="quad-inner">
               <div>
                 <video src="vid/pokedroid-demo-1.webm" />
@@ -137,11 +142,11 @@
             </div>
           </div>
         </section>
-<!--
+
         <section>
-          <iframe width="420" height="315" src="https://www.youtube.com/embed/qnUVGZiLEDo" frameborder="0" allowfullscreen></iframe>
+          <video src="vid/pokedroid_real.webm" controls height="600"/>
         </section>
--->
+
         <section>
           <h3>Why was Pokédroid so popular?</h3>
         </section>
@@ -157,36 +162,38 @@
         </section>
 
 				<section>
-<video src="vid/bulbapedia.webm"  height="600"/>
+          <video src="vid/bulbapedia.webm"  height="600"/>
 				</section>
 
-        <!--
         <section>
-          <iframe width="420" height="315" src="https://www.youtube.com/embed/Re73QNJ9p9Q" frameborder="0" allowfullscreen></iframe>
-        </section>
-        -->
-
-<!--
-        <section>
-          <video src="vid/pokedex2.webm" height="600" ></video>
-        </section>
--->
-
-        <section>
-          <h4>What Pokédroid had that no others had:</h4>
-          <h2>OFFLINE!</h2>
+          <h4>What made Pokédroid unique:</h4>
+          <h3 class="fragment">#1: Offline!</h3>
         </section>
 
         <section>
-          <blockquote>
+          <blockquote class="speech bubble">
             It's so nice to be able to be <strong>on the road</strong> playing Pokémon
             and having a <strong>quick</strong> reference without all the large guidebooks.
           </blockquote>
-          <span style="right: 0;position: absolute;"><br/><em>– Google Play review</em></span>
+
+          <div class="text-muted">
+            <em>– Google Play Store review</em>
+          </div>
         </section>
 
         <section>
-          <video src="vid/pokedroid-longer-demo-1.webm" height="600" ></video>
+
+          <blockquote class="speech bubble">
+            Super awesome-o. I use this all the time for Pokémon <strong>instead of
+            having to go online</strong> to Serebii.
+          </blockquote>
+          <div class="text-muted">
+            <em>– Google Play Store review</em>
+          </div>
+        </section>
+
+        <section>
+          <video src="vid/pokedex2.webm" height="600"></video>
         </section>
 
         <section>
@@ -199,11 +206,56 @@
         </section>
 
         <section>
+          <h4>What made Pokédroid unique:</h4>
+          <h3 class="fragment">#2: Responsive & mobile-optimized</h3>
+        </section>
+
+        <section>
+          <blockquote class="speech bubble">
+            I love having a Pokedex at my finger tips.
+          </blockquote>
+          <div class="text-muted">
+            <em>– Google Play Store review</em>
+          </div>
+        </section>
+
+        <!--
+        <section>
+          <blockquote class="speech bubble">
+            Love it! This app is going to be used by our entire MN DS
+            league! Helped me plan my team for CFC too!
+          </blockquote>
+          <div class="text-muted">
+            <em>– Google Play Store review</em>
+          </div>
+        </section>
+        -->
+
+        <section>
+          <video src="vid/pokedroid-longer-demo-1.webm" height="600" ></video>
+        </section>
+
+        <section>
+          <h4>What made Pokédroid unique:</h4>
+          <h3 class="fragment">#3: Used device APIs</h3>
+        </section>
+
+        <section>
+          <video src="vid/pokedroid_live_demo.webm" height="600" controls></video>
+        </section>
+
+
+        <section>
           <h3>2011: Pokédroid DMCA'd <script>document.write('\uD83D\uDE22')</script></h3>
+          <img class="no-border" src="img/pokedroid_pulled.png" width="1083"/>
+        </section>
+
+        <section>
+          <h3>Why DMCA?</h3>
           <ul>
-            <li>Publishing to app store asserts IP ownership</li>
-            <li>Nintendo wary of apps</li>
-            <li>Web sites okay</li>
+            <li class="fragment">Publishing to app store asserts IP ownership</li>
+            <li class="fragment">Nintendo wary of apps</li>
+            <li class="fragment">Web sites okay</li>
           </ul>
         </section>
 
@@ -328,32 +380,6 @@
 
 		<script>
 
-      var randomizedTextTimeout;
-
-      function randomizeText(slide) {
-        var rando = slide.querySelector('.random-color');
-        if (rando) {
-          randomizedTextTimeout = setInterval(function () {
-            requestAnimationFrame(function () {
-              if (!rando.dataset.colorized) {
-                var text = rando.innerText;
-                var newText = '';
-                for (var i = 0; i < text.length; i++) {
-                  newText += '<span style="color:' + randomColor() + '">' + text.charAt(i) + '</span>';
-                }
-                rando.innerHTML = newText;
-                rando.dataset.colorized = true;
-              } else {
-                var spans = rando.querySelectorAll('span');
-                for (var i = 0; i < spans.length; i++) {
-                  spans[i].style.color = randomColor();
-                }
-              }
-            });
-          }, 100);
-        }
-      }
-
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -380,6 +406,9 @@
         var videos = Array.from(
           document.querySelectorAll('section.present video'));
         videos.forEach(function (vid) {
+          if (vid.controls) {
+            return;
+          }
           vid.loop = true;
           vid.currentTime = 0;
           vid.play();
@@ -400,9 +429,6 @@
         }
 
         playVideo();
-
-        clearInterval(randomizedTextTimeout);
-        randomizeText(event.currentSlide);
       } );
 
       Reveal.addEventListener('fragmentshown', function (e) {
@@ -426,8 +452,6 @@
       }
 
       playVideo();
-
-      randomizeText(document.querySelector('section.present'));
 
       if (!UA.isChrome() && !UA.isFirefox() && !UA.isAndroid() && !UA.isOpera()) {
         window.alert(
